@@ -60,5 +60,5 @@ RUN rm /usr/local/stata/stata.lic
 # Setup for standard operation
 USER rstudio
 WORKDIR /code
-ENTRYPOINT ["stata-mp"]
+ENTRYPOINT ["/bin/bash"]
 

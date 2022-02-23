@@ -6,9 +6,14 @@ install.packages(c("dplyr",
                  "restorepoint",
                  "devtools",
                  "ggplot2",
-                 "here"))
+                 "here",
+                 "rmarkdown",
+                 "reshape"))
+
+old <- getOption("repos")
 options(repos = c(
-    skranz = 'https://skranz.r-universe.dev'))
+    skranz = 'https://skranz.r-universe.dev'),
+    old)
 #options(repos = c(CRAN = 'https://cloud.r-project.org'))
 
 install.packages(c("xglue",
@@ -16,5 +21,3 @@ install.packages(c("xglue",
                   "MetaStudies",
                   "RoundingMatters",
                   "stringtools"))
-
-install.packages(c("rmarkdown"))
