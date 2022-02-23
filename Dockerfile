@@ -47,8 +47,10 @@ ENV LANG en_US.utf8
 
 USER rstudio
 COPY setup.do /setup.do
+COPY install.R /install.R
 WORKDIR /home/statauser
 RUN /usr/local/stata/stata do /setup.do | tee setup.$(date +%F).log
+RUN Rscript /install.R
 
 #=============================================== Clean up
 #  then delete the license again

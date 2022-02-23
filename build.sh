@@ -18,13 +18,6 @@ fi
 BUILDARGS="--progress plain --no-cache"
 
 
-if [[ -z $1 ]]
-then
-  echo "You need to specify the name of Stata license file as an argument"
-  exit 2
-fi
-#STATALIC=$(readlink -m $1)
-STATALIC=$1
 
 if [[ ! -f $STATALIC ]] 
 then
